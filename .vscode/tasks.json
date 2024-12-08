@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with OpenMP",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-fopenmp",
+                "-O3",
+                "-o",
+                "hoare_parallel",
+                "hoare_parallel.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
