@@ -53,19 +53,15 @@ int main(int argc, char* argv[]) {
 
     std::cout << "Sorting an array of size: " << array_size << std::endl;
 
-    // Start measuring time
+    // Call Lomuto's QuickSort & calculate time
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    // Call Lomuto's QuickSort
     quickSortLomuto(arr, 0, array_size - 1);
 
-    // End measuring time
     auto end_time = std::chrono::high_resolution_clock::now();
 
-    // Calculate duration
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-    // Print the time taken to complete sorting
     std::cout << "Lomuto's QuickSort completed in " << duration.count() << " milliseconds." << std::endl;
 
     return 0;
